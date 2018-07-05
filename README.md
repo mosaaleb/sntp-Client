@@ -10,28 +10,28 @@ UDP is the standard protocol for sending packets to NTP server on port 123.
 The SNTP Message (packet) sent by the client to the server and 
 the responses from the servers to the client use a common format:
 <pre>
-                          1               2               3                4
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-           |LI | VN  |Mode |    Stratum    |     Poll      |   Precision   |
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-           |                          Root Delay (32)                      |
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-           |                       Root Dispersion (32)                    |
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-           |                    Reference Identifier (32)                  |
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-           |        Reference Timestamp (integral part) (32)               |
-           |                            (fractional part) (32)             |
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-           |        Originate Timestamp (integral part) (32)               |
-           |                            (fractional part) (32)             |
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-           |         Receive Timestamp (integral part) (32)                |
-           |                           (fractional part) (32)              |
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-           |         Transmit Timestamp (integral part) (32)               |
-           |                            (fractional part) (32)             |
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+                1               2               3                4
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |LI | VN  |Mode |    Stratum    |     Poll      |   Precision   |
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |                          Root Delay (32)                      |
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |                       Root Dispersion (32)                    |
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |                    Reference Identifier (32)                  |
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |        Reference Timestamp (integral part) (32)               |
+ |                            (fractional part) (32)             |
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |        Originate Timestamp (integral part) (32)               |
+ |                            (fractional part) (32)             |
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |         Receive Timestamp (integral part) (32)                |
+ |                           (fractional part) (32)              |
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |         Transmit Timestamp (integral part) (32)               |
+ |                            (fractional part) (32)             |
+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
  Overall message is 48 byte long 
 
@@ -49,4 +49,4 @@ the responses from the servers to the client use a common format:
 | Destination Temestamp | T4   | time reply received by client  |
 
 
-Timestamps are represented as a 64-bit fixed point number, in seconds relative to 0000 UT on 1 January 1900
+Timestamps are represented as a 64-bit fixed pointer number, in seconds relative to 0000 UT on 1 January 1900
