@@ -43,6 +43,9 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <sys/types.h>
+#include <sys/socket.h>
+#include <time.h>
+#include <netinet/in.h>
 
 
 typedef struct{
