@@ -5,6 +5,22 @@ The client will communicate with remote NTP server.
 UDP is the standard protocol for sending packets to NTP server on port 123. 
 
 
+> To do network I/O, the first thing a process must do is to call the socket system call, specifying the type of communication protocol desired.
+
+```C++
+#include <sys/types.h>
+#include <sys/socket.h>
+```
+
+`socket.h` file containes `socket` function definition:
+`int socket(int family, int type, int protocol);`
+
+We gonna use `AF_INET` family, `SOCK_DGRAM` type, and `UDP` protocol.
+
+*Read More:*
+[Socket System Calls](https://www.cs.hmc.edu/~mike/public_html/courses/cs125/FAQ/examples.html)
+
+
 ## SNTP message format
 
 The SNTP Message (packet) sent by the client to the server and 
