@@ -13,9 +13,17 @@ UDP is the standard protocol for sending packets to NTP server on port 123.
 ```
 
 `socket.h` file containes `socket` function definition:
+<br>
 `int socket(int family, int type, int protocol);`
-
+<br>
 We gonna use `AF_INET` family, `SOCK_DGRAM` type, and `UDP` protocol.
+<br>
+`socket.h` file also contains `connect` function definition to establish a connection with a server:
+<br>
+`int connect(int sockfd, struct socketaddr* servaddr, int addrlen);`
+<br>
+The `sockfd` is a socket descriptor that was returned by the socket system call. The second and third arguments are a pointer to a socket address and its size.
+The connect system call does not return until the connection is established, or an error is returned to the process.
 
 *Read More:*
 [Socket System Calls](https://www.cs.hmc.edu/~mike/public_html/courses/cs125/FAQ/examples.html)
