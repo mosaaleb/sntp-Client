@@ -43,6 +43,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <sys/types.h>
+#include <unistd.h>
 #include <sys/socket.h>
 #include <time.h>
 #include <netinet/in.h>
