@@ -18,13 +18,13 @@ UDP is the standard protocol for sending packets to NTP server on port 123.
 <br>
 We gonna use `AF_INET` family, `SOCK_DGRAM` type, and `UDP` protocol.
 The family is one of: 
-<pre>
+
     AF_UNIX     -- Unix internal protocols
     AF_INET     -- Internet protocols
     AF_NS       -- Xerox NS protocols
     AF_IMPLINK  -- IMP link layer
-</pre>
-<br>
+
+
 `socket.h` file also contains `connect` function definition to establish a connection with a server:
 <br>
 `int connect(int sockfd, struct socketaddr* servaddr, int addrlen);`
