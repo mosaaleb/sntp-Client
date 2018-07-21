@@ -73,3 +73,16 @@ typedef struct{
     uint32_t txTm_f;
 
 }ntp_packet;
+
+int main(void){
+    // create the packet
+    // setup the message with all zeros
+
+    ntp_packet packet = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    memset( &packet, 0, sizeof( ntp_packet ) );
+
+    // Set the first byte's bits to 00,011,011 for li = 0, vn = 3, and mode = 3. The rest will be left set to zero.
+
+    *( ( char * ) &packet + 0 ) = 0x1b; // Represents 27 in base 10 or 00011011 in base 2.
+}
