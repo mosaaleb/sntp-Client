@@ -1,6 +1,11 @@
 # Project Summary
 
 
+## Introduction
+This project is originally built for interviewing task as embedded software engineer position. The project demonstrates low level understanding of how networking works.
+
+
+## Summary
 The client will communicate with remote NTP server.
 UDP is the standard protocol for sending packets to NTP server on port 123. 
 
